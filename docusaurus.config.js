@@ -159,11 +159,7 @@ module.exports = {
         {
           type: 'docsVersionDropdown',
           position: 'right',
-          dropdownItemsAfter: [
-            { to: 'https://ionicframework.com/docs/v4/components', label: 'v4', target: '_blank' },
-            { to: 'https://ionicframework.com/docs/v3/', label: 'v3', target: '_blank' },
-          ],
-          // dropdownItemsAfter: [{to: '/versions', label: 'All versions'}],
+          dropdownItemsAfter: [{to: '/versions', label: 'All versions'}],
           dropdownActiveClassDisabled: true,
         },
         {

@@ -13,13 +13,13 @@ import SteppedColorGenerator from '@components/page/theming/SteppedColorGenerato
   />
 </head>
 
-Ionic provides several global variables that are used throughout components to change the default theme of an entire application. [Application Colors](#application-colors) are useful to change the look of most of the Ionic components, and [Stepped Colors](#stepped-colors) are used as variations in some of the Ionic components.
+提供了几个全局变量，这些变量可用于更改整个组件的默认主题。[应用程序颜色](#application-colors)可用于改变大多数 Ionic 组件的外观，而[阶梯颜色](#stepped-colors)则可在某些 Ionic 组件中用作变体。
 
-## Application Colors
+## 应用颜色
 
-The application colors are used in multiple places in Ionic. These are useful for easily creating dark themes or themes that match a brand.
+Ionic 中多处使用了应用程序颜色。这些颜色对于轻松创建深色主题或与品牌相匹配的主题非常有用。
 
-It is important to note that the background and text color variables also require a rgb variable to be set in <a href="https://developer.mozilla.org/en-US/docs/Glossary/RGB" target="_blank">rgb format</a>. See [The Alpha Problem](advanced.md#the-alpha-problem) for an explanation of why the `rgb` property is also needed.
+值得注意的是，背景和文本颜色变量还需要以 <a href="https://developer.mozilla.org/en-US/docs/Glossary/RGB" target="_blank">rgb 格式</a>设置一个 rgb 变量。请参阅 [The Alpha Problem](advanced.md#the-alpha-problem)，了解为什么还需要 `rgb` 属性。
 
 | Name                                       | Description                                          |
 | ------------------------------------------ | ---------------------------------------------------- |
@@ -50,18 +50,18 @@ It is important to note that the background and text color variables also requir
 | `--ion-item-color`                         | Color of the components in the Item                  |
 | `--ion-placeholder-color`                  | Color of the placeholder in Inputs                   |
 
-## Stepped Colors
+## 阶梯颜色
 
-After exploring different ways to customize the Ionic theme, we found that we couldn't use just one background or text color. In order to imply importance and depth throughout the design, we need to use different shades of the background and text colors. To accommodate this pattern, we created stepped colors.
+在探索了定制 Ionic 主题的不同方法后，我们发现不能只使用一种背景或文字颜色。为了在整个设计中体现重要性和深度，我们需要使用不同深浅的背景和文字颜色。为了适应这种模式，我们创建了阶梯颜色。
 
-While updating the background (`--ion-background-color`) and text (`--ion-text-color`) variables will change the look of the app for most components, there are certain Ionic components where it may look off, or broken. This will be more apparent when applying a darker theme.
+虽然更新背景（`--ion-background-color`）和文本（`--ion-text-color`）变量会改变大多数组件的外观，但某些 Ionic 组件的外观可能会出现偏差或破损。在应用深色主题时，这种情况会更加明显。
 
-In some components we use a shade darker than the background or lighter than the text. For example, an item heading text may need to be <CodeColor color="#404040">#404040</CodeColor>, which is a few shades lighter than our default text color. Meanwhile, the loading component background is a shade darker than white, using <CodeColor color="#f2f2f2">#f2f2f2</CodeColor>. We use stepped colors in order to define these slight variations. It is important to update the stepped colors when updating the background or text color of an application.
+在某些组件中，我们使用比背景深或比文本浅的色调。例如，项目标题文本可能需要使用 <CodeColor color="#404040">#404040</CodeColor>，这比我们默认的文本颜色浅一些。同时，加载组件的背景颜色比白色深一些，使用 <CodeColor color="#f2f2f2">#f2f2f2</CodeColor> 。我们使用阶梯颜色来定义这些细微变化。在更新应用程序的背景或文本颜色时，更新阶梯颜色非常重要。
 
-By default, the Ionic stepped colors start at the default background color value <CodeColor color="#ffffff">#ffffff</CodeColor> and mix with the text color value <CodeColor color="#000000">#000000</CodeColor> using an increasing percentage. The full list of stepped colors is shown in the generator below.
+默认情况下，Ionic 的阶梯色从默认背景颜色值 <CodeColor color="#ffffffff">#ffffffff</CodeColor> 开始，并与文本颜色值 <CodeColor color="#000000">#000000</CodeColor> 混合，百分比不断增加。阶跃色的完整列表显示在下面的生成器中。
 
-## Stepped Color Generator
+## 阶跃色彩发生器
 
-Create a custom background and text color theme for your app. Update the background or text color’s hex values below, then copy and paste the generated code directly into your Ionic project.
+为您的应用程序创建自定义背景和文本颜色主题。更新以下背景或文本颜色的十六进制值，然后将生成的代码直接复制并粘贴到您的 Ionic 项目中。
 
 <SteppedColorGenerator />

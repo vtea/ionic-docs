@@ -8,14 +8,14 @@ inlineHtmlPreviews: true
 import CodeColor from '@components/page/theming/CodeColor';
 
 <head>
-  <title>Advanced Theming: Quickly Customize App Colors using CSS | Ionic</title>
+  <title>高级调色：使用 CSS 快速定制应用程序颜色| Ionic</title>
   <meta
     name="description"
     content="CSS-based theming enables apps to customize colors quickly by loading a CSS file or changing CSS property values. Read to learn about Ionic Advanced Theming."
   />
 </head>
 
-CSS-based theming enables apps to customize the colors quickly by loading a CSS file or changing a few CSS property values.
+基于 CSS 的主题使应用程序可以通过加载 CSS 文件或更改几个 CSS 属性值来快速定制颜色。
 
 ## `theme-color` Meta
 
