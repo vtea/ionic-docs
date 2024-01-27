@@ -1,109 +1,114 @@
 import { writeFileSync } from 'fs';
-import fetch from 'node-fetch';
+import * as utils from './utils.mjs';
+import cliJSON from './data/cli.json' assert { type: 'json' };
+import cliOverrides from './data/meta-override.json' assert { type: 'json' };
 
-// replace with latest once it's relased
-const tag = 'latest';
+const commandToKebab = (str) =>
+  str
+    .replace('ionic ', '')
+    .replace(/([a-z])([A-Z])/g, '$1-$2')
+    .replace(/[\s_]+/g, '-')
+    .toLowerCase();
 
-const pluginApis = [
-  'action-sheet',
-  'app',
-  'app-launcher',
-  'browser',
-  'camera',
-  'clipboard',
-  'device',
-  'dialog',
-  'filesystem',
-  'geolocation',
-  'google-maps',
-  'haptics',
-  'keyboard',
-  'local-notifications',
-  'motion',
-  'network',
-  'preferences',
-  'push-notifications',
-  'screen-reader',
-  'share',
-  'splash-screen',
-  'status-bar',
-  'text-zoom',
-  'toast',
-];
+(async function () {
+  const { commands } = cliJSON;
+  commands.map(writePage);
+})();
 
-async function buildPluginApiDocs(pluginId) {
-  const [readme, pkgJson] = await Promise.all([getReadme(pluginId), getPkgJsonData(pluginId)]);
+function writePage(page) {
+  const data = [
+    renderFrontmatter(page),
+    renderIntro(page),
+    renderInputs(page),
+    renderOptions(page),
+    renderAdvancedOptions(page),
+    renderExamples(page),
+  ].join('');
 
-  const apiContent = createApiPage(pluginId, readme, pkgJson);
-  const fileName = `${pluginId}.md`;
-
-  writeFileSync(`docs/native/${fileName}`, apiContent);
-  writeFileSync(`versioned_docs/version-v6/native/${fileName}`, apiContent);
+  // Removed code related to cli/commands
 }
 
-function createApiPage(pluginId, readme, pkgJson) {
-  const title = `${toTitleCase(pluginId)} Capacitor Plugin API`;
-  const desc = pkgJson.description ? pkgJson.description.replace(/\n/g, ' ') : title;
-  const editUrl = `https://github.com/ionic-team/capacitor-plugins/blob/main/${pluginId}/README.md`;
-  const editApiUrl = `https://github.com/ionic-team/capacitor-plugins/blob/main/${pluginId}/src/definitions.ts`;
-  const sidebarLabel = toTitleCase(pluginId);
+function renderFrontmatter({ name, groups }) {
+  const shortName = name.replace('ionic ', '');
+  const slug = commandToKebab(shortName);
 
-  /**
-   * - removes JSDoc HTML comments as they break docusauurs
-   * - The { character is used for opening JavaScript expressions. 
-   * MDX will now fail if what you put inside {expression} that is 
-   * not a valid expression: replace it by escaping it with a backslash. 
-   * Only do this for { characters that are inside <code> blocks.
-   */
-  readme = readme.replaceAll(/<!--.*-->/g, '').replace(/<code>(.*?)<\/code>/g, (_match, p1) => {
-    // Replace { with \{ inside the matched <code> content
-    return `<code>${p1.replace(/{/g, '\\{')}</code>`;
-  });
+  const frontmatter = {
+    title: name,
+    sidebar_label: shortName,
+  };
+
+  const deprecated = groups.includes('deprecated')
+    ? ':::warning\nThis command has been deprecated and will be removed in an upcoming major release of the Ionic CLI.\n:::'
+    : '';
+
+  return `---
+${Object.entries(frontmatter)
+  .map(([key, value]) => `${key}: ${typeof value === 'string' ? `"${value.replace('"', '\\"')}"` : value}`)
+  .join('\n')}
+---
+${utils.getHeadTag(cliOverrides[slug])}
+
+${deprecated}
+`;
+}
+
+function renderIntro({ description, summary, name, options, inputs }) {
+  let args = '';
+  if (inputs && inputs.length > 0) {
+    for (let input of inputs) {
+      args += ` [${input.name}]`;
+    }
+  }
+  if (options && options.length > 0) {
+    args += ' [options]';
+  }
 
   return `
----
-title: ${title}
-description: ${desc}
-editUrl: ${editUrl}
-editApiUrl: ${editApiUrl}
-sidebar_label: ${sidebarLabel}
----
-${readme}`.trim();
+${summary}
+
+\`\`\`shell
+$ ${name}${args}
+\`\`\`
+
+${description}`;
 }
 
-async function getReadme(pluginId) {
-  const url = `https://cdn.jsdelivr.net/npm/@capacitor/${pluginId}@${tag}/README.md`;
-  const rsp = await fetch(url);
-  return rsp.text();
+function renderExamples({ exampleCommands }) {
+  if (!exampleCommands || exampleCommands.length === 0) {
+    return '';
+  }
+
+  return `
+## Examples
+
+\`\`\`shell
+${exampleCommands.map((command) => `$ ${command}`).join('\n')}
+\`\`\`
+`;
 }
 
-async function getPkgJsonData(pluginId) {
-  const url = `https://cdn.jsdelivr.net/npm/@capacitor/${pluginId}@${tag}/package.json`;
-  const rsp = await fetch(url);
-  return rsp.json();
+function renderInputs({ inputs }) {
+  if (inputs.length === 0) {
+    return '';
+  }
+
+  return utils.renderList('Inputs', inputs);
 }
 
-async function main() {
-  await Promise.all(pluginApis.map(buildPluginApiDocs));
-  console.log(`Plugin API Files Updated 🎸`);
+function renderOptions({ options }) {
+  options = options.filter((option) => !option.groups.includes('advanced'));
+
+  if (options.length === 0) {
+    return '';
+  }
+  return utils.renderOptions('Options', options);
 }
 
-function toTitleCase(str) {
-  return str.replace(/(^\w|-\w)/g, (s) => {
-    return s.replace(/-/, ' ').toUpperCase();
-  });
+function renderAdvancedOptions({ options }) {
+  options = options.filter((option) => option.groups.includes('advanced'));
+
+  if (options.length === 0) {
+    return '';
+  }
+  return utils.renderOptions('Advanced Options', options);
 }
-
-if (!String.prototype.replaceAll) {
-  String.prototype.replaceAll = function (str, newStr) {
-    // If a regex pattern
-    if (Object.prototype.toString.call(str).toLowerCase() === '[object regexp]') {
-      return this.replace(str, newStr);
-    }
-
-    // If a string
-    return this.replace(new RegExp(str, 'g'), newStr);
-  };
-}
-
-main();

@@ -14,7 +14,7 @@ const commandToKebab = (str) =>
   // console.log(cliJSON);
   const { commands } = cliJSON;
 
-  commands.map(writePage);
+ // commands.map(writePage);
 })();
 
 function writePage(page) {
