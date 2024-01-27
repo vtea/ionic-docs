@@ -10,7 +10,7 @@ module.exports = {
   title: 'Ionic Documentation',
   tagline:
     'Ionic is the app platform for web developers. Build amazing mobile and web apps with one shared code base and open web standards',
-  url: 'https://ionicframework.com',
+  url: 'https://nanjiren.online',
   baseUrl: `${BASE_URL}/`,
   i18n: {
     defaultLocale: 'en',
@@ -21,7 +21,7 @@ module.exports = {
   },
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/meta/favicon-96x96.png',
+  favicon: 'img/logos/aichatlogo.png',
   organizationName: 'ionic-team',
   projectName: 'ionic-docs',
   presets: [
@@ -116,8 +116,8 @@ module.exports = {
       hideOnScroll: true,
       logo: {
         alt: 'Site Logo',
-        src: `/logos/ionic-text-docs-dark.svg`,
-        srcDark: `/logos/ionic-text-docs-light.svg`,
+        src: `/logos/ionic-text-docs-dark.png`,
+        srcDark: `/logos/ionic-text-docs-dark.png`,
         href: '/',
         target: '_self',
         width: 139,
@@ -150,8 +150,8 @@ module.exports = {
         },
         {
           type: 'doc',
-          docId: 'updating/7-0',
-          label: 'Ionic v7.0.0 Upgrade Guide',
+          docId: 'updating/pro',
+          label: 'Pro 0.11.2',
           position: 'left',
           className: 'cta',
         },
@@ -159,7 +159,7 @@ module.exports = {
           type: 'docsVersionDropdown',
           position: 'right',
           dropdownItemsAfter: [{to: '/versions', label: 'All versions'}],
-          dropdownActiveClassDisabled: true,
+         // dropdownActiveClassDisabled: flase,
         },
         {
           type: 'search',
@@ -170,32 +170,32 @@ module.exports = {
           position: 'right',
           items: [
             {
-              href: 'https://ionicframework.com/community',
-              label: 'Community Hub',
+              href: 'https://nanjiren.online',
+              label: '官网',
               target: '_blank',
               rel: null,
             },
             {
-              href: 'https://forum.ionicframework.com/',
-              label: 'Forum',
+              href: 'https://jiao.nanjiren.online',
+              label: '好望角',
               target: '_blank',
               rel: null,
             },
             {
-              href: 'https://www.meetup.com/topics/ionic-framework/',
-              label: 'Meetups',
+              href: 'https://console.nanjiren.online',
+              label: '授权中心',
               target: '_blank',
               rel: null,
             },
             {
-              href: 'https://blog.ionicframework.com/',
-              label: 'Blog',
+              href: 'https://aimhub.nanjiren.online',
+              label: 'API代理服务',
               target: '_blank',
               rel: null,
             },
             {
-              href: 'https://twitter.com/ionicframework',
-              label: 'Twitter',
+              href: 'https://aimage.nanjiren.online',
+              label: 'MJ代理服务',
               target: '_blank',
               rel: null,
             },
@@ -203,24 +203,18 @@ module.exports = {
           className: 'navbar__link--community',
         },
         {
-          label: 'Support',
+          label: '演示站',
           position: 'right',
           items: [
             {
-              href: 'https://ionicframework.com/support',
-              label: 'Help Center',
+              href: 'https://chat.nanjiren.online',
+              label: '专业版演示站',
               target: '_blank',
               rel: null,
             },
             {
-              href: 'https://ionic.zendesk.com/',
-              label: 'Customer Support',
-              target: '_blank',
-              rel: null,
-            },
-            {
-              href: 'https://ionicframework.com/advisory',
-              label: 'Enterprise Advisory',
+              href: 'https://uac.cn2.ltd',
+              label: '旗舰版演示站',
               target: '_blank',
               rel: null,
             },
@@ -261,7 +255,7 @@ module.exports = {
           target: '_blank',
         },
         {
-          href: 'https://github.com/ionic-team/ionic-framework',
+          href: 'https://github.com/Nanjiren01/AIChatWeb',
           position: 'right',
           className: 'icon-link icon-link-mask icon-link-github',
           'aria-label': 'GitHub repository',

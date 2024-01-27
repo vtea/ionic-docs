@@ -2,21 +2,21 @@ module.exports = {
   docs: [
     {
       type: 'category',
-      label: 'Getting Started',
+      label: '快速开始',
       collapsed: false,
-      items: ['index', 'intro/environment', 'intro/cli', 'intro/cdn', 'intro/vscode-extension', 'intro/next'],
+      items: ['index', 'intro/course', 'intro/cli', 'intro/cdn', 'intro/vscode-extension', 'intro/next'],
     },
     {
       type: 'category',
-      label: 'Upgrade Guides',
+      label: '版本更新/升级操作',
       collapsed: false,
-      items: ['updating/7-0'],
+      items: ['updating/7-0','updating/pro'],
     },
     {
       type: 'category',
-      label: 'Contributing',
+      label: '版本说明',
       collapsed: false,
-      items: ['contributing/how-to-contribute', 'contributing/coc'],
+      items: ['function/intro', 'function/pro', 'function/ce'],
     },
   ],
 

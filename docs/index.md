@@ -1,17 +1,17 @@
 ---
-title: Introduction to Ionic
-sidebar_label: Overview
+title: 项目简介
+sidebar_label: 项目简介
 slug: /
 hide_table_of_contents: true
-demoUrl: https://docs-demo.ionic.io/
-demoSourceUrl: https://github.com/ionic-team/docs-demo
+demoUrl: https://chat.nanjiren.online/
+demoSourceUrl: https://chat.nanjiren.online/
 ---
 
 import DocsCard from '@components/global/DocsCard';
 import DocsCards from '@components/global/DocsCards';
 
 <head>
-  <title>Open-Source UI Toolkit to Create Your Own Mobile Apps</title>
+  <title>Aichat web Doc</title>
   <meta
     name="description"
     content="Ionic Framework is an open-source UI toolkit to create your own mobile apps using web technologies with integrations for popular frameworks."
@@ -22,118 +22,97 @@ import DocsCards from '@components/global/DocsCards';
   <meta property="og:url" content="https://ionicframework.com/docs" />
 </head>
 
-Ionic is an open source UI toolkit for building performant, high-quality mobile apps using web technologies — HTML, CSS, and JavaScript — with integrations for popular frameworks like [Angular](angular/overview.md), [React](react.md), and [Vue](vue/overview.md).
+本项目基于ChatGPT-Next-Web开源项目进行二次开发，致力于构建完整的全链路商业团队AI平台，提供可自行部署的解决方案.
 
-Get started building by [installing Ionic](intro/cli.md) or following our [First App Tutorial](intro/next.md#build-your-first-app) to learn the main concepts.
+构建你自己的全链路应用级AI平台.
 
 <intro-end />
 
 <DocsCards>
-  <DocsCard header="Installation Guide" href="/intro/cli" icon="/icons/guide-installation-icon.svg" hoverIcon="/icons/guide-installation-icon-hover.svg">
-    <p>Step-by-step guides to setting up your system and installing the framework.</p>
+  <DocsCard header="社区版" href="/intro/cli" icon="/icons/guide-installation-icon.svg" hoverIcon="/icons/guide-installation-icon-hover.svg">
+    <p>部署永远完全免费，前端所有代码开源在 Github 社区，拥有基础的平台管理功能.</p>
   </DocsCard>
 
 <DocsCard
-  header="UI Components"
+  header="专业版"
   href="/components"
   icon="/icons/guide-components-icon.svg"
   hoverIcon="/icons/guide-components-icon-hover.svg"
 >
-  <p>Dive into Ionic beautifully designed UI component library.</p>
+  <p>拥有强大的平台管理及用户功能，并且享有百位站长及官方的社区经验分享和教程.</p>
 </DocsCard>
 
 <DocsCard
-  header="Native Functionality"
+  header="旗舰版"
   href="/native"
   icon="/icons/guide-native-icon.svg"
   hoverIcon="/icons/guide-native-icon-hover.svg"
 >
-  <p>Integrate native device plugins, like Bluetooth, Maps, HealthKit, and more.</p>
+  <p>拥有最丰富最强大的平台管理及用户功能，前端全部重构精细打磨，只为AI发烧而生.</p>
 </DocsCard>
 
-  <DocsCard header="Theming" href="/theming/basics" icon="/icons/guide-theming-icon.svg" hoverIcon="/icons/guide-theming-icon-hover.svg">
-    <p>Learn to easily customize and modify your Ionic app's visual design to fit your brand.</p>
+  <DocsCard header="源代码" href="/theming/basics" icon="/icons/guide-theming-icon.svg" hoverIcon="/icons/guide-theming-icon-hover.svg">
+    <p>拥有AIChat系统的前后端所有源码，专为发烧开发者和企业二次定制而生.</p>
   </DocsCard>
 </DocsCards>
 
-## Overview
+## 还在找AI镜像网站？自己部署吧
 
-Ionic focuses on the frontend UX and UI interaction of an app — UI controls, interactions, gestures, animations. It's easy to learn, and integrates with other libraries or frameworks, such as [Angular](angular/overview.md), [React](react.md), or [Vue](vue/overview.md). Alternatively, it can be used standalone without any frontend framework using a simple [script include](intro/cdn.md). If you’d like to learn more about Ionic before diving in, we <a href="https://youtu.be/p3AN3igqiRc" target="_blank">created a video</a> to walk you through the basics.
 
-### One codebase, running everywhere
 
-Ionic is the only mobile app stack that enables web developers to build apps for all major app stores and the mobile web from a single codebase. And with [Adaptive Styling](theming/platform-styles.md), Ionic apps look and feel at home on every device.
+### 完整的平台系统
 
-### A focus on performance
+我们将Github上具有将近30K Star的优秀开源项目ChatGPT-Next-Web进行 二次开发，在原有极致体验的Web前端上进行优化与功能增加，并开发用于 平台管理的后端系统，形成了全链路的AI应用级平台系统.
 
-Ionic is built to perform and behave great on the latest mobile devices with best practices like efficient hardware accelerated transitions, and touch-optimized gestures.
+### 轻量、稳定、安全、声誉
 
-### Clean, simple, and functional design
+我们的开源AI应用级平台是一款轻量级的解决方案，具有卓越的稳定性和 安全性。平台源代码完全开放，用户可以自由使用和修改，以满足不同的 需求.
 
-Ionic is designed to work and display beautifully on all current mobile devices and platforms. With ready-made components, typography, and a gorgeous (yet extensible) base theme that adapts to each platform, you'll be building in style.
+### 支持广泛AI模型
 
-### Native and Web optimized
+我们的AI平台将支持当前最流行的AI模型，并不断适配最新的模型，已接入 和计划接入的有：GPT类、Claude类、PaLM类、文心一言、讯飞星火、通义千问、 Midjourney等，以满足用户不同的需求策略.
 
-Ionic emulates native app UI guidelines and uses native SDKs, bringing the UI standards and device features of native apps together with the full power and flexibility of the open web. Ionic uses Capacitor (or Cordova) to deploy natively, or runs in the browser as a Progressive Web App.
+### 多模态化
 
-## Goals
+我们的开源AI应用级平台是一款多模态化的解决方案，可以支持多种不同类型 的数据输入和输出。同时平台可以同时处理多种数据类型，包括文本、图像、 音频等，从而实现更加丰富的应用场景.
 
-### Cross-platform
+### 应用场景的针对优化
 
-Build and deploy apps that work across multiple platforms, such as native iOS, Android, and the web as a Progressive Web App - all with one code base. Write once, run anywhere.
+我们的开源AI应用级平台是一款针对特定的使用场景进行了优化的解决方案。 平台针对不同的应用场景进行了深度优化，以提供更加高效和精准的服务，实现 真正的AI智能化.
 
-### Web Standards-based
+### 最佳的AI应用平台
 
-Ionic is built on top of reliable, [standardized web technologies](reference/glossary.md#web-standards): HTML, CSS, and JavaScript, using modern Web APIs such as Custom Elements and Shadow DOM. Because of this, Ionic components have a stable API, and aren't at the whim of a single platform vendor.
+我们将在后续发布AIChat项目的官方应用平台AIASS，让不熟悉技术的人也能完完 整整的体验AI技术带来的极致效率体验.
 
-### Beautiful Design
+## 完整的全链路商业AI应用级平台
 
-Clean, simple, and functional. Ionic is designed to work and display beautifully out-of-the-box across all platforms.
-Start with pre-designed components, typography, interactive paradigms, and a gorgeous (yet extensible) base theme.
+### 丰富的系统功能
 
-### Simplicity
+我们的用户注册和登录系统采用了先进的前端技术和安全措施，确保用户的个人信息和账户安全。我们支持多种注册方式，包括邮箱注册，让用户可以方便地注册并登录系统。
 
-Ionic is built with simplicity in mind, so that creating apps is enjoyable, easy to learn, and accessible to just about anyone with web development skills.
+同时，我们还提供了完善的用户管理功能，让管理员可以轻松管理用户信息、权限和角色，为用户提供更好的服务。无论是企业还是个人用户，我们都可以为您提供一流的用户注册和登录解决方案，助您快速建立稳定的用户群体。.
 
-## Framework Compatibility
+### 纯净且在你的控制之下
 
-While past releases of Ionic were tightly coupled to Angular, version 4.x of the framework was re-engineered to work as a standalone <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components" target="_blank">Web Component</a> library, with integrations for the latest JavaScript frameworks, like Angular. Ionic can be used in most frontend frameworks with success, including React and Vue, though some frameworks need a shim for full Web Component support.
+我们的用户前端是完全没有广告和推广的，用户可以在一个纯净的环境中使用我们的系统。此外，我们采用了严格的模型使用规则，确保所有的模型使用都在我们的控制之下，防止模型滥用的发生。
 
-### JavaScript
+这样，我们可以更好地管理我们的用户集群，保障用户的权益和系统的稳定性。我们致力于为用户提供最好的使用体验，让用户可以在一个安全、稳定、纯净的环境中享受我们的服务.
 
-One of the main goals with moving Ionic to <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components" target="_blank">Web Components</a> was to remove any hard requirement on a single framework to host the components. This made it possible for the core components to work standalone in a web page with just a script tag. While working with frameworks can be great for larger teams and larger apps, it is now possible to use Ionic as a standalone library in a single page even in a context like WordPress.
+### 清晰明了的后台管理
 
-### Angular
+我们的管理员后台界面非常清晰明了，具有高延展性、高弹性等特点。管理员可以轻松地查看用户的使用情况，包括注册、登录、使用模型等方面的数据。我们的后台系统还支持自定义报表和数据分析，让管理员可以更加深入地了解用户的需求和行为，为用户提供更好的服务。
 
-Angular has always been at the center of what makes Ionic great. While the core components have been written to work as a standalone Web Component library, the `@ionic/angular` package makes integration with the Angular ecosystem a breeze. `@ionic/angular` includes all the functionality that Angular developers would expect coming from Ionic 2/3, and integrates with core Angular libraries, like the Angular router.
+此外，我们的系统具有高度的灵活性和可扩展性，可以根据用户的需求进行定制化开发，满足不同用户的需求。最重要的是，我们始终坚持让用户群体由用户自己做主，让用户拥有更大的自主权和话语权。我们相信，只有真正尊重用户，才能赢得用户的信任和支持，让我们的用户群体不断壮大.
 
-### React
+### 完整的用户管理机制
 
-Ionic now has official support for the popular React library. Ionic React lets React developers use their existing web skills to build apps that target iOS, Android, and the web. With `@ionic/react`, you can use all the core Ionic components, but in a way that feels like using native React components.
+我们的系统设计非常注重用户隐私和数据安全，用户的个人信息和数据都受到严格的保护。同时，我们的用户群体信息也是一目了然的，管理员可以轻松地查看用户的基本信息和使用情况，但不会泄露用户的隐私。
 
-### Vue
+我们始终坚持让用户拥有更大的自主权和话语权，让用户可以自由地选择使用我们的系统，并且可以自由地管理自己的个人信息和数据。我们相信，只有真正尊重用户的权益和隐私，才能赢得用户的信任和支持，让我们的用户群体不断壮大。我们的系统由我们自己做主，我们有完全的控制权和管理权，可以确保系统的稳定性和安全性，为用户提供最好的使用体验.
 
-Ionic now has official support for the popular Vue 3 library. Ionic Vue lets Vue developers use their existing web skills to build apps that target iOS, Android, and the web. With `@ionic/vue`, you can use all the core Ionic components, but in a way that feels like using native Vue components.
+## 开始你的部署工作
 
-### Future Support
-
-Support for other frameworks will be considered in future releases.
-
-## Ionic CLI
-
-The official [Ionic CLI](cli.md), or Command Line Interface, is a tool that quickly scaffolds Ionic apps and provides a number of helpful commands to Ionic developers. In addition to installing and updating Ionic, the CLI comes with a built-in development server, build and debugging tools, and much more. If you are an [Appflow](#appflow) member, the CLI can be used to perform cloud builds and deployments, and administer your account.
-
-## Appflow
-
-To help build, deploy, and manage Ionic apps throughout their lifecycle, we offer a commercial service for production apps called <a href="https://ionic.io/appflow" target="_blank">Appflow</a>, which is <strong>separate from the open source Framework.</strong>
-
-Appflow helps developers and teams compile native app builds and deploy live code updates to Ionic apps from a centralized dashboard. Optional paid upgrades are available for more advanced capabilities like publishing directly to app stores, workflow automation, single sign-on (SSO) and access to connected services and integrations.
-
-Appflow requires an <a href="https://dashboard.ionicframework.com/signup" target="_blank">Ionic Account</a> and comes with a free “Hobby” plan for those interested in playing around with some of its features.
-
-## Ecosystem
-
-Ionic is actively developed and maintained full-time by a core team, and its ecosystem is guided by an international community of developers and contributors fueling its growth and adoption. Developers and companies small and large use Ionic to build and ship amazing apps that run everywhere.
+目前我们支持Docker Compose进行一键部署，后续会开放更多部署方法.
 
 ### Join the Community
 
@@ -148,5 +127,3 @@ There are millions of Ionic developers in over 200 countries worldwide. Here are
 ## License
 
 The Ionic UI Toolkit is a free and open source project, released under the permissible <a href="https://opensource.org/licenses/MIT" target="_blank">MIT license</a>. This means it can be used in personal or commercial projects for free. MIT is the same license used by such popular projects as jQuery and Ruby on Rails.
-
-This documentation content (found in the <a href="https://github.com/ionic-team/ionic-docs" target="_blank">ionic-docs</a> repo) is licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache 2 license</a>.
