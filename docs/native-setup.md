@@ -21,7 +21,7 @@ import TabItem from '@theme/TabItem';
   `}</style>
 </head>
 
-Getting started with Capacitor is fairly straight forward for Ionic developers. Adding plugins to your project is no different than adding any dependencies you may need to a project.
+G对于 Ionic 开发人员来说，开始使用 Capacitor 非常简单。在项目中添加插件与在项目中添加您可能需要的任何依赖项没有什么不同.
 <intro-end />
 
 ## Install

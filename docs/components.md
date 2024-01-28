@@ -1,5 +1,5 @@
 ---
-title: UI Components
+title: 后端功能介绍
 hide_table_of_contents: true
 ---
 
@@ -7,7 +7,7 @@ import DocsCard from '@components/global/DocsCard';
 import DocsCards from '@components/global/DocsCards';
 
 <head>
-  <title>UI Components | User Interface Application Building Components</title>
+  <title>用户界面 | Aichat web docs</title>
   <meta
     name="description"
     content="Ionic Framework comes stock with a number of high-level UI components, including cards, lists, and tabs to quickly and easily build your app's user interface."
@@ -19,30 +19,30 @@ import DocsCards from '@components/global/DocsCards';
   `}</style>
 </head>
 
-Ionic apps are made of high-level building blocks called Components, which allow you to quickly construct the UI for your app. Ionic comes stock with a number of components, including cards, lists, and tabs. Once you’re familiar with the basics, refer to the [API Index](api.md) for a complete list of each component and sub-component.
+后端开源，可自行二开，详情见GitHub.
 
 <intro-end />
 
 <DocsCards>
-  <DocsCard header="Action Sheet" href="api/action-sheet" img="/icons/feature-component-actionsheet-icon.png">
-    <p>Action Sheets display a set of options with the ability to confirm or cancel an action.</p>
+  <DocsCard header="仪表盘" href=" " img="/img/ui/yibiao.png">
+    <p>显示订单总数，订单总额，最近30天订单数量，金额变化，注册数量曲线图，聊天次数曲线图.</p>
   </DocsCard>
 
-<DocsCard header="Alert" href="api/alert" icon="/icons/component-alert-icon.png">
-  <p>Alerts are a great way to offer the user the ability to choose a specific action or list of actions.</p>
+<DocsCard header="注册赠额" href="api/alert" img="/img/ui/zhucehuodong02.png">
+  <p>注册即赠送额度.</p>
 </DocsCard>
 
-<DocsCard header="Badge" href="api/badge" icon="/icons/component-badge-icon.png">
-  <p>Badges are a small component that typically communicate a numerical value to the user.</p>
+<DocsCard header="邀请注册" href="api/badge" img="/img/ui/zhucehuodong03.png">
+  <p>邀请注册.</p>
 </DocsCard>
 
-<DocsCard header="Button" href="api/button" icon="/icons/component-button-icon.png">
-  <p>Buttons let your users take action. They're an essential way to interact with and navigate through an app.</p>
+<DocsCard header="邀请码管理" href="api/button" img="/img/ui/redeemCode01.png">
+  <p>邀请码.</p>
 </DocsCard>
 
-<DocsCard header="Card" href="api/card" icon="/icons/component-card-icon.png">
+<DocsCard header="套餐管理" href="api/card" img="/img/ui/package01.png">
   <!-- prettier-ignore -->
-  <p>Cards are a great way to display an important piece of content, and can contain images, buttons, text, and more.</p>
+  <p>自定义.</p>
 </DocsCard>
 
 <DocsCard header="Checkbox" href="api/checkbox" icon="/icons/component-checkbox-icon.png">

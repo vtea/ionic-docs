@@ -5,7 +5,7 @@ title: API Index
 import APIList from '@components/page/api/APIList';
 
 <head>
-  <title>API Index | Ionic Docs API Index for all API Custom Elements</title>
+  <title>所有 API 自定义元素的 API 索引</title>
   <meta
     name="description"
     content="Each component in the Ionic Docs API Index consists of one or more custom elements—which each, in turn, may expose methods, events, and CSS custom properties."

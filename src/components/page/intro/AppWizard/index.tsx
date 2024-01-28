@@ -9,8 +9,7 @@ export default function AppWizard(props) {
       <div className="heading-group">
         <header>Try our App Wizard</header>
         <p>
-          Use our App Wizard to generate an Ionic project visually. Choose a template, custom colors, app icon, and
-          JavaScript Framework to get building quicker.
+        使用我们的应用程序向导直观地生成 Ionic 项目。选择模板、自定义颜色、应用程序图标和 JavaScript 框架，以便更快地构建应用程序。.
         </p>
       </div>
       <div>
